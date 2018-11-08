@@ -1,0 +1,5 @@
+﻿Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\*\shell\Open with BuildType\command]
+@="C:\\Program Files\\BuildType\\BuildType.exe \"%1\""
+
