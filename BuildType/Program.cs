@@ -12,9 +12,9 @@ namespace BuildType
 
 		public static string GetBuildType(string assemblyName)
 		{
-			var sb = new StringBuilder();
+			StringBuilder sb = new StringBuilder();
 			Assembly assm = Assembly.LoadFrom(assemblyName);
-			object[] attributes = assm.GetCustomAttributes(typeof(DebuggableAttribute), false);
+			var attributes = assm.GetCustomAttributes(typeof(DebuggableAttribute), false);
 
 			if (attributes.Length == 0)
 			{
@@ -53,9 +53,16 @@ namespace BuildType
 				return 2;
 			}
 
-			string message = GetBuildType(args[0]);
-			MessageBox.Show(message);
-			return 0;
+			try
+			{
+				string message = GetBuildType(args[0]);
+				MessageBox.Show(message);
+				return 0;
+			}
+			catch
+			{
+				return -1;
+			}
 		}
 
 		#endregion
