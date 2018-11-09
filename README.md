@@ -8,4 +8,4 @@ Usage:
    
 # What to do?
 
-Compile, copy to C:\Program Files\BuildType\BuildType.exe , run reg file and use explorer context menu.
+Compile, copy to `C:\Program Files\BuildType\BuildType.exe` , run reg file and use explorer context menu.
